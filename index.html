@@ -1,43 +1,53 @@
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Cesium Sensors</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <style>
-    body { font-family: sans-serif; }
-    li { margin-top: 5px; }
-    .outer > li { margin-top: 1.4em; }
-    .smallFont { font-size: 60%; }
-    </style>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Cesium Sensors Example</title>
+
+  <link rel="stylesheet" href="//cesiumjs.org/releases/1.6/Build/Cesium/Widgets/widgets.css" />
+  <script src="//cesiumjs.org/releases/1.6/Build/Cesium/Cesium.js"></script>
+  <script src="../Build/CesiumSensors.js"></script>
+
+
+  <style>
+      #cesiumContainer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+          font-family: sans-serif;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          height: 100%;
+      }
+
+      #toolbar {
+          margin: 5px;
+          padding: 2px 5px;
+          position: absolute;
+      }
+  </style>
 </head>
-
 <body>
-
-<ul class="outer">
-    <li>
-        Apps
-        <ul>
-            <li>
-                <a href="Examples/czml.html">CZML loading example</a>
-            </li>
-            <li>
-                <a href="Examples/api.html">Programmatic API example</a>
-            </li>
-        </ul>
-    </li>
-    <li>
-        Tests
-        <ul>
-            <li>
-                <a href="Specs/SpecRunner.html">Run all tests</a>
-            </li>
-            <li>
-                <a href="Specs/SpecRunner.html?category=none">Select a test to run</a>
-            </li>
-        </ul>
-    </li>
-</ul>
-
+  <div id="cesiumContainer"></div>
+  <div id="toolbar"></div>
+  <script type="module" src="./src/CesiumDna.js"></script>
 </body>
 </html>
